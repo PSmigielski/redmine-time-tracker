@@ -1,36 +1,42 @@
 import React, {PropsWithChildren, useEffect, useState} from "react";
 import * as localforage from "localforage";
-import { useNavigate } from "react-router-dom";
+import {redirect, useNavigate} from "react-router-dom";
 
 type AuthContextType = {
     apiKey: string;
     isAuthorized:boolean;
-    authorize: (apiKey: string) => Promise<boolean|undefined>;
+    authorize: (apiKey: string, url: string) => Promise<boolean|undefined>;
 }
 
 
 export const AuthProvider = ({children}: PropsWithChildren) => {
     const navigate = useNavigate();
     const [apiKey, setApiKey] = useState("");
+    const [url, setUrl] = useState("");
     const [isAuthorized, setIsAuthorized] = useState(false);
     const initAuth = async () =>{
         try{
             const key = await localforage.getItem("apiKey");
-            if(key == null){
+            const url = await localforage.getItem("redmineUrl");
+            if(key == null || url == null){
                 navigate("/unauthorized");
             }else{
                 setApiKey(key as string);
+                setUrl(url as string);
                 setIsAuthorized(true);
             }
         }catch (e){
             console.log(e);
         }
     }
-    const authorize = async (apiKey: string) => {
+    const authorize = async (apiKey: string, url: string) => {
         try{
-            if(apiKey.length < 40 || apiKey.length > 40) return false;
+            if((apiKey.length < 40 || apiKey.length > 40) || !url) return false;
             await localforage.setItem("apiKey", apiKey);
+            await localforage.setItem("url", url);
             setApiKey(apiKey);
+            setUrl(apiKey);
+            setIsAuthorized(true);
             navigate("/");
         }catch (e){
             console.log(e);
