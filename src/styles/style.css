@@ -1,0 +1,22 @@
+:root{
+  --secondary: #101010;
+  --active: #BB73D2;
+  --background: #2B3038;
+  --text-color: #FFFFFF;
+  --placeholder-color: #909090;
+  --issue-new: #66CCFF;
+  --issue-assigned: #F0F3F5;
+  --issue-feedback: #FFA500;
+}
+*{
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+}
+body{
+  background: var(--background);
+  color: var(--text-color);
+  width:100vw;
+  height: 100vh;
+  font-family: 'Poppins', sans-serif;
+}
