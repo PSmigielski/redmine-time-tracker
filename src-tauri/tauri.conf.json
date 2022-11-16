@@ -19,6 +19,11 @@
         "all": true
       },
       "http": {
+        "scope": ["http://**", "https://**"],
+        "all": true,
+        "request": true
+      },
+      "dialog": {
         "all": true
       },
       "notification": {
@@ -40,7 +45,7 @@
         "icons/icon.icns",
         "icons/icon.ico"
       ],
-      "identifier": "com.tauri.dev",
+      "identifier": "com.redmine.tracker",
       "longDescription": "",
       "macOS": {
         "entitlements": null,

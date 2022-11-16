@@ -1,0 +1,16 @@
+.issue{
+    width: 90%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0px 0px 0px 10px;
+}
+.issue > *{
+    margin: 0px 10px 0px 0px;
+}
+.issue__circle{
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+}
