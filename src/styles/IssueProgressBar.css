@@ -1,0 +1,12 @@
+.issueProgressBar{
+    width: 56px;
+    height: 16px;
+    border: var(--cta) 1px solid;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.issueProgressBar__indicator{
+    background-color: var(--cta);
+    height: 14px;
+}

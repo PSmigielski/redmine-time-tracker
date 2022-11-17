@@ -1,9 +1,8 @@
 import React, {useState} from "react";
 import {SubmitHandler, useForm} from "react-hook-form";
 import {AuthContext} from "../context/AuthContext";
-
 import "../styles/UnauthorizedView.css";
-import {redirect} from "react-router-dom";
+
 type AuthFormValues = {
     apiKey: string;
     redmineUrl: string;

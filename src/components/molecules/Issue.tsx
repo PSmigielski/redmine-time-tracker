@@ -1,12 +1,14 @@
 import React from "react";
 import "../../styles/Issue.css";
+import {IssueProgressBar} from "../atoms/IssueProgressBar";
 
-export const Issue = ({id, name}: {id: number, name:string|null}) => {
+export const Issue = ({id, name, progress}: {id: number, name:string|null, progress: number| null}) => {
     return(
         <div className="issue" key={id}>
-            <div>
+            <div className={"issue__tagWrapper"}>
                 <div className="issue__circle" style={{background: '#FF0000'}}/>
                 <p className="issue__paragraph"><span>#{id}</span> - <span>{name}</span></p>
             </div>
+            <IssueProgressBar progress={progress}/>
         </div>);
 }

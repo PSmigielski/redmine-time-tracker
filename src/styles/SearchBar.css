@@ -3,5 +3,6 @@
     height: 32px;
     background-color: var(--background);
     color: var(--text-color);
+    border: var(--cta) 1px solid;
     padding-left: 10px;
 }

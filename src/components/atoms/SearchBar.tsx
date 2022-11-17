@@ -7,5 +7,5 @@ type AuthFormValues = {
 };
 export const SearchBar = () => {
     const {register, handleSubmit, formState:{ errors }, clearErrors}= useForm<AuthFormValues>();
-    return (<input type={"text"} className={"searchBar"} {...register("searchQuery", { minLength: 40, maxLength: 40 })}/>)
+    return (<input type={"text"} className={"searchBar"} placeholder={"Type issue code or smth"} {...register("searchQuery", { minLength: 40, maxLength: 40 })}/>)
 }
