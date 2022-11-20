@@ -1,7 +1,10 @@
 import React from "react";
+import "../../styles/TimerWrapper.css";
 
 export const TimerWrapper = () => {
     return(
-        <div></div>
+        <div className="timerWrapper">
+
+        </div>
     );
 }

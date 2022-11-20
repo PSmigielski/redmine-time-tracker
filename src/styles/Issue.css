@@ -1,6 +1,6 @@
 .issue{
     width: 90%;
-    height: 40px;
+    margin: 5px 0px 5px 0px;
     display: flex;
     align-items: center;
     justify-content: flex-start;
