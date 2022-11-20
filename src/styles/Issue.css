@@ -4,13 +4,19 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    padding: 0px 0px 0px 10px;
 }
 .issue__tagWrapper{
-    width: calc(100% - 56px);
+    width: calc(100% - 60px);
     display: flex;
     align-items: center;
     justify-content: flex-start;
+}
+.issue__paragraph{
+    width: 90%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding-right: 10px;
 }
 .issue__circle{
     width: 10px;
