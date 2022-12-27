@@ -10,7 +10,7 @@ export const IssueList = () => {
     }, []);
     return (
         <div className="issueList">
-            {redmineContext.issues.map(el => (<Issue id={el.id} name={el.subject} progress={el.done_ratio}/>))}
+            {redmineContext.issues.map(el => (<Issue id={el.id} name={el.subject} progress={el.done_ratio} issue={el}/>))}
         </div>
     )
 }
